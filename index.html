@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>1ding.site</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      			.box {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #060c21;
+			}
+			/* 用box的伪元素添加一个面积比box略大的矩形,并通过改变层叠次序,置于box的下层,达到给box设置边框的效果 */
+			.box::before {
+				content: '';
+				position: absolute;
+				top: -2px;
+				left: -2px;
+				right: -2px;
+				bottom: -2px;
+				background: #fff;
+				z-index: -1;
+			}
+			/* 于上面类似,做一个面积比box略大的矩形,并通过改变层叠次序,置于box的下层,达到给box设置边框的效果 */
+			.box::after {
+				content: '';
+				position: absolute;
+				top: -2px;
+				left: -2px;
+				right: -2px;
+				bottom: -2px;
+				background: #fff;
+				z-index: -2;
+				/* 滤镜属性  给图像设置高斯模糊。"radius"一值设定高斯函数的标准差，或者是屏幕上以多少像素融在一起，所以值越大越模糊；如果没有设定值，则默认是0；这个参数可设置css长度值，但不接受百分比值。 */
+				filter: blur(40px);
+			}
+			.box::before,
+			.box::after {
+				/* linear-gradient() 函数用于创建一个线性渐变的 "图像"。 参数1:用角度值指定渐变的方向（或角度）  12点钟方向为0deg*/
+				background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+			}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0"> 一定</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link active" aria-current="page" href="assets/book.pdf">这里有一本书</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3">
+    <h1>2017.8-2021.8</h1>
+    <p class="lead">假如你想访问的是1ding.site的网站。很遗憾，“一定”在2021年的8月正式停止了服务。在网站运行的四年里，共产出了七万余字的内容。其中的主要部分已经整理在右上角的PDF当中。<p></p>感谢各位读者朋友的支持和评论, 一定感谢!</p></p>
+    
+    <SCRIPT LANGUAGE="JavaScript">  
+    function reP(){  
+    document.getElementById('oImg').style.display = "block";  
+    }  
+    </SCRIPT>  
+    <p class="lead">
+    <INPUT TYPE="button" class="btn btn-lg btn-secondary fw-bold border-white bg-white" value='méi yǒu yì si' onclick="reP()"> 
+    <div class="box" overflow='hidden' id="oImg" style='display:none'>
+    			<img src='assets/myys.png' class = 'img-fluid' overflow='hidden' id="oImg" >  
+		</div>
+   </p>
+
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p>如果有对站长内容仍然感兴趣的朋友可以点击关注上面的微信公众号：没有意思</p>
+  </footer>
+</div>
+
+
+    
+  </body>
+</html>
